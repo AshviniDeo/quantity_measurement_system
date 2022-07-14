@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:quantity_measurement_system/components/gradient.dart';
-import 'package:quantity_measurement_system/components/textfile.dart';
+import 'package:quantity_measurement_system/widgets/gradient.dart';
+import 'package:quantity_measurement_system/widgets/textfile.dart';
 
 class MyDropDown extends StatelessWidget {
   double height;
