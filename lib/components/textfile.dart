@@ -10,11 +10,11 @@ class MyTitle extends StatelessWidget {
     return Text(
       text!,
       style: TextStyle(
-          fontFamily: FONT,
-          color: Colors.purple,
-          fontSize: 30,
-          letterSpacing: 2,
-          fontWeight: FontWeight.bold),
+        fontFamily: FONT,
+        color: Colors.purple,
+        fontSize: 30,
+        letterSpacing: 2,
+      ),
     );
   }
 }
@@ -28,10 +28,11 @@ class MyHeading extends StatelessWidget {
     return Text(
       text!,
       style: TextStyle(
-          fontFamily: FONT,
-          color: Colors.purple,
-          fontSize: 25,
-          letterSpacing: 2),
+        fontFamily: FONT,
+        color: Colors.purple,
+        fontSize: 25,
+        letterSpacing: 2,
+      ),
     );
   }
 }
@@ -45,10 +46,13 @@ class MyText extends StatelessWidget {
     return Text(
       text!,
       style: TextStyle(
-          fontFamily: FONT,
-          color: Colors.purple[300],
-          fontSize: 22,
-          letterSpacing: 2),
+        fontFamily: FONT,
+        color: Colors.purple[300],
+        fontSize: 22,
+        letterSpacing: 2,
+      ),
+      softWrap: true,
+      overflow: TextOverflow.fade,
     );
   }
 }

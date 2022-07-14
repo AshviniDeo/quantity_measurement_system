@@ -8,3 +8,5 @@ List<Color> colorList = [
   const Color.fromARGB(255, 121, 246, 156),
   const Color.fromARGB(255, 226, 97, 248)
 ];
+
+List<Color> buttonColor = [Colors.purpleAccent, Colors.purple];
