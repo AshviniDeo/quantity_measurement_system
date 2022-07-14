@@ -21,10 +21,10 @@ class MyList extends StatelessWidget {
           child: Card(
             color: const Color.fromARGB(0, 0, 0, 0),
             child: ListTile(
-              title: Text(symbol[items.elementAt(index).toString()],
+              title: Text(symbol[items.elementAt(index)],
                   style: TextStyle(fontFamily: FONT, fontSize: 22)),
               leading: Text(
-                data[items.elementAt(index).toString()],
+                data[items.elementAt(index)],
                 style: TextStyle(fontFamily: FONT, fontSize: 22),
               ),
             ),
