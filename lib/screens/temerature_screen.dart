@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quantity_measurement_system/components/gradient.dart';
-import 'package:quantity_measurement_system/components/my_button.dart';
-import 'package:quantity_measurement_system/components/my_drop_down_button.dart';
+import 'package:quantity_measurement_system/widgets/gradient.dart';
+import 'package:quantity_measurement_system/widgets/my_drop_down_button.dart';
+import 'package:quantity_measurement_system/widgets/my_text_field.dart';
+import 'package:quantity_measurement_system/widgets/textfile.dart';
 import 'package:quantity_measurement_system/components/my_list.dart';
-import 'package:quantity_measurement_system/components/my_text_field.dart';
-import 'package:quantity_measurement_system/components/textfile.dart';
 import 'package:quantity_measurement_system/services/temperature_convert.dart';
 import 'package:quantity_measurement_system/utility/theme.dart';
 

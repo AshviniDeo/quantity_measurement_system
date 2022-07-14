@@ -1,14 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:quantity_measurement_system/components/gradient.dart';
-import 'package:quantity_measurement_system/components/my_button.dart';
-import 'package:quantity_measurement_system/components/my_drop_down_button.dart';
 import 'package:quantity_measurement_system/components/my_list.dart';
-import 'package:quantity_measurement_system/components/my_text_field.dart';
-import 'package:quantity_measurement_system/components/textfile.dart';
 import 'package:quantity_measurement_system/services/weight_convert.dart';
 import 'package:quantity_measurement_system/utility/theme.dart';
+import 'package:quantity_measurement_system/widgets/gradient.dart';
+import 'package:quantity_measurement_system/widgets/my_drop_down_button.dart';
+import 'package:quantity_measurement_system/widgets/my_text_field.dart';
+import 'package:quantity_measurement_system/widgets/textfile.dart';
 
 class WeightScreen extends StatefulWidget {
   const WeightScreen({Key? key}) : super(key: key);
@@ -129,9 +128,7 @@ class _WeightScreenState extends State<WeightScreen> {
                       width: 180,
                       child: Center(
                         child: MyText(
-                          text: data[selectValue].toString() +
-                              " " +
-                              symbol[selectValue],
+                          text: data[selectValue] + " " + symbol[selectValue],
                         ),
                       )),
                   const SizedBox(

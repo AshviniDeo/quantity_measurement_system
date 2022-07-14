@@ -1,20 +1,23 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:quantity_measurement_system/components/gradient.dart';
-import 'package:quantity_measurement_system/components/my_drop_down_button.dart';
-import 'package:quantity_measurement_system/components/my_list.dart';
-import 'package:quantity_measurement_system/components/my_text_field.dart';
-import 'package:quantity_measurement_system/components/textfile.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:quantity_measurement_system/services/length_convert.dart';
 import 'package:quantity_measurement_system/utility/theme.dart';
+import 'package:quantity_measurement_system/widgets/gradient.dart';
+import 'package:quantity_measurement_system/widgets/my_drop_down_button.dart';
+import 'package:quantity_measurement_system/widgets/my_list.dart';
+import 'package:quantity_measurement_system/widgets/my_text_field.dart';
+import 'package:quantity_measurement_system/widgets/textfile.dart';
 
 class LengthScreen extends StatefulWidget {
+  const LengthScreen({Key? key}) : super(key: key);
+
   @override
   State<LengthScreen> createState() => _LengthScreenState();
 }
 
 class _LengthScreenState extends State<LengthScreen> {
+  final _digitController = TextEditingController();
   List<String> items = [
     "KiloMeter",
     "Meter",
@@ -25,8 +28,6 @@ class _LengthScreenState extends State<LengthScreen> {
   ];
   String value = "Centimeter";
   String selectValue = "Centimeter";
-  final _digitController = TextEditingController();
-
   Map data = {
     "KiloMeter": "0",
     "Meter": "0",
@@ -35,6 +36,7 @@ class _LengthScreenState extends State<LengthScreen> {
     "Yard": "0",
     "Foot": "0"
   };
+
   Map symbol = {
     "KiloMeter": "km",
     "Meter": "m",
@@ -73,15 +75,14 @@ class _LengthScreenState extends State<LengthScreen> {
     Map result = await instance.getValues(number, value);
     setState(() {
       data = {
-        "Centimeter": result["Centimeter"].toString(),
+        "KiloMeter": result["Kilometer"].toString(),
         "Meter": result["Meter"].toString(),
-        "Kilometer": result["Kilometer"].toString(),
+        "Centimeter": result["Centimeter"].toString(),
+        "Inch": result["Inch"].toString(),
         "Yard": result["Yard"].toString(),
         "Foot": result["Foot"].toString(),
-        "Inch": result["Inch"].toString(),
       };
     });
-    print(data);
   }
 
   @override

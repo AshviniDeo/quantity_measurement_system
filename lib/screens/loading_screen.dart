@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quantity_measurement_system/components/gradient.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:quantity_measurement_system/utility/theme.dart';
+import 'package:quantity_measurement_system/widgets/gradient.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
